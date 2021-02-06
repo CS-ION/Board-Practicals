@@ -20,7 +20,7 @@ print('''\nMENU DRIVEN PROGRAM
 a. displaying the details of all students
 b. searching a student using roll no\n''')
 
-def search():
+def search():                         #searching roll no.
     f = open('STUDENT.dat','rb')
     roll_no = int(input('enter the roll no : '))
     try:
@@ -32,7 +32,7 @@ def search():
         return 'RECORD NOT FOUND'
     f.close()
 
-def display():
+def display():                    #finding out the student details
     f = open('STUDENT.dat','rb')
     try:
         c = 1
