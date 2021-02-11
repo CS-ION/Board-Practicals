@@ -19,7 +19,11 @@ def CreateEmp():
     print('Operation done succesfully')
 
 def show():
-    f = open('emp.dat','rb')
+    try:
+        f = open('emp.dat','rb')
+    except:
+        print('File doesnt exist')
+        return
     try:
         while True:
             T = pickle.load(f)
