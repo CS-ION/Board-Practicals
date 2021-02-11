@@ -3,7 +3,7 @@ import pickle
 print('''MENU DRIVEN PROGRAM
 1. Adding a new record [EID, Ename, designation, salary]
 2. Display the detail of all employees whose salary is more than 50000
-ENTER YOUR CHOICE (1/2/3/4/5)''')
+ENTER YOUR CHOICE (1/2)''')
 
 def CreateEmp():
     f = open('emp.dat','ab+')
@@ -19,7 +19,11 @@ def CreateEmp():
     print('Operation done succesfully')
 
 def display():
-    f = open('emp.dat','rb')
+    try:
+        f = open('emp.dat','rb')
+    except:
+        print('File doesnt exist')
+        return
     try:
         while True:
             T = pickle.load(f)
