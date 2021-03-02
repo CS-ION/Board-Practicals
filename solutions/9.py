@@ -12,11 +12,11 @@ def Update1000():
     mycursor.execute("Update EMP set EmpSalary=EmpSalary+1000 where EmpSalary<80000")
     mydb.commit()
 
-def DeleteSalary():
-    Salary=int(input("enter salary of employee whose records you want to delete"))
-    mycursor.execute("delete from EMP where EmpSalary=Salary")
+def Command3():
+    Employee_Salary = int(input("Enter the Employee salary of the person whose name should be deleted"))
+    mycursor.execute("delete from employee where Salary = '"+str(Employee_Salary)+"'")
     mydb.commit()
-    print(mycursor.rowcount,"record deleted")
+    print(mycursor.rowcount,"Record Deleted")
 
 def DisplayAsc():
     mycursor.execute("Select * from EMP order by EmpSalary")
@@ -44,7 +44,7 @@ while True:
     elif Choice==2:
         Update1000()
     elif Choice==3:
-        DeleteSalary()
+        Command3()
     elif Choice==4:
         DisplayAsc()
     elif Choice==5:
