@@ -1,4 +1,4 @@
-filename = input('Enter the name of text file : ')
+f = input('Enter the name of text file : ')
 
 print('''\nMENU DRIVEN PROGRAM
 a. Count and display the number of upper case and 
